@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ShapeChanger() Hands-On</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: lightGray;
+            
+        }
+
+        h1 {
+            color: #333;
+            font-family: cursive;
+        }
+
+        button {
+            padding: 15px 20px;
+            font-size: 25px;
+            cursor: pointer;
+            font-family: cursive;
+            background-color: gray;
+            color: black;
+            border-radius: 20px;
+            
+        }
+
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 20px auto;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript ShapeChanger() Hands-On</h1>
+
+    <button id="colorButton">Click Me</button>
+    <div id="colorDiv"></div>
+
+    <script>
+        // Get references to elements
+        const colorButton = document.getElementById("colorButton");
+        const colorDiv = document.getElementById("colorDiv");
+
+        // Event listener function
+        function colorChanger() {
+            if (colorDiv.style.backgroundColor === "green") {
+                colorDiv.style.backgroundColor = "blue";
+            } else {
+                colorDiv.style.backgroundColor = "green";
+            }
+        }
+
+        
+        colorButton.addEventListener("click", colorChanger);
+    </script>
+
+</body>
+</html>
